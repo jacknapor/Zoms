@@ -1,0 +1,41 @@
+User Stories:
+
+-As a user, I can move my player throughout the board 
+
+ -I can see my player rotate when it changes directions 
+
+ -I can control which direction, and when my player moves 
+
+-As a user, I can attack a zombie 
+
+ -I can kill zombies by depleting their health 
+
+ -I can fire bullets from the direction I am facing 
+
+ -I will be chased by zombies that know my location 
+
+-As a user, I can buy items from the store in between rounds 
+
+ -I will gain points from killing zombies 
+
+ -I will be able to upgrade my armor, to defend against zombies 
+
+ -I will be able to upgrade my gun, to deal more damage to zombies 
+
+-As a user, I can see all of my player’s important information 
+
+ -I can check the round 
+
+ -I can check how many zombies I’ve killed 
+
+ -I can see how much ammo I have 
+
+ -I can see how much health I have 
+
+ -I can see how many points I have 
+
+-As a user, I can see a neatly designed board and user interface 
+
+ -Design the board 
+
+ -Create the buttons, and functionality
