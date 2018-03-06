@@ -27,7 +27,7 @@ public class ZombieMain {
 
     public static void main(String[] args) throws IOException {
         
-
+       
         ZombieView theView = new ZombieView();
         ZombieController theController = new ZombieController(theView);
         theView.setVisible(true);
