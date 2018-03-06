@@ -82,8 +82,8 @@ public class DrawBullet extends JComponent implements KeyListener {
     public boolean collision(Bullet bullet) {
         int boardx = (bullet.getX()) / 20;
         int boardy = (bullet.getY()) / 20;
-
-        if (bullet.getX() % 20 == 0 && bullet.getY() % 20 == 0) {
+        System.out.println(bullet.getX());
+        
             if (board.getCells()[boardy][boardx] instanceof Wall) {
                 return true;
             }
@@ -94,7 +94,7 @@ public class DrawBullet extends JComponent implements KeyListener {
                 return true;
             }
 
-        }
+        
         return false;
     }
 
