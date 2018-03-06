@@ -197,7 +197,7 @@ public class ZombieController implements ActionListener {
             pause();
             this.drBoard.repaint();
             theView.getBoard().remove(this.layeredBoard);
-            theView.getBtnStart().setEnabled(true);
+            
             theView.getBtnExit().setEnabled(false);
            
          
@@ -304,6 +304,16 @@ public class ZombieController implements ActionListener {
     }
 
     private void resetBoard() throws IOException {
+        Thread t;
+        t = new Thread(new Runnable(){
+            public void run(){
+                JOptionPane.showOptionDialog(null, "Resetting Board..", "Resetting", JOptionPane.INFORMATION_MESSAGE, JOptionPane.DEFAULT_OPTION,null,new Object[]{},null);
+         
+            }
+        });
+  t.start();
+         
+        theView.getcontrols().setVisible(true);
         Sound.song.clip.setMicrosecondPosition(0);
         Sound.song.clip.loop(Clip.LOOP_CONTINUOUSLY);
         boardNum = new Random().nextInt(3) + 1;
@@ -321,7 +331,9 @@ public class ZombieController implements ActionListener {
         this.board.getPlayer().setArmor(0);
         this.board.getPlayer().setKillCount(0);
         theView.getLblRound().setText("Round 1");
-        theView.getcontrols().setVisible(true);
+        theView.getBtnStart().setEnabled(true);
+        JOptionPane.getRootFrame().dispose();
+        
         
         this.theStore = new ShopView();
         this.shopController = new ShopController(this.theStore,
